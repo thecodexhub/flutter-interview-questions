@@ -19,6 +19,10 @@ This repository is about common Flutter interview questions and their answers.
 | 08 |[What do you mean by open-source software? Is Flutter open-source?](#q8-what-do-you-mean-by-open-source-software-is-flutter-open-source)|
 | 09 |[Differentiate between `StatelessWidget` and `StatefulWidget` in Flutter.](#q9-differentiate-between-statelesswidget-and-statefulwidget-in-flutter)|
 | 10 |[What is `BuildContext` in Flutter? And why is it needed?](#q10-what-is-buildcontext-in-flutter-and-why-is-it-needed)|
+| 11 |[What are packages and plugins in Flutter?](#q11-what-are-packages-and-plugins-in-flutter)|
+| 12 |[Name some popular apps made with Flutter.](#q12-name-some-popular-apps-made-with-flutter)|
+| 13 |[What are different build modes in Flutter?](#q13-what-are-different-build-modes-in-flutter)|
+| 14 |[What is the difference between `WidgetsApp` and `MaterialApp` in Flutter?](#q14-what-is-the-difference-between-widgetsapp-and-materialapp-in-flutter)|
 
 <br />
 <hr />
@@ -122,6 +126,62 @@ Yes, Flutter is an open-source software development kit.
 `BuildContext` is a locator that tracks and locates each widget in a widget tree. `BuildContext` objects are passed to **WidgetBuilder** functions, and are available from the `State.context` member. Some static functions (e.g. **showDialog**, **Theme.of**, and so forth) also take build contexts so that they can act on behalf of the calling widget, or obtain data specifically for the given context.
 
 There are many reasons why `BuildContext` is important. From locating widgets in the tree to interacting with **RenderObjects**, the context makes all of these interactions possible. It serves as the **bridge** between the widgets and rendering layer and is especially powerful for combining functionality or using information from one tree in another.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q11. What are packages and plugins in Flutter?
+
+A package only contains Dart code. Some of the packages may use Flutter specific functionality and thus have a dependency on the Flutter framework.
+
+A plugin contains Dart combined with one or more platform-specific native (Java/Swift/JavaScript) code. The API of the plugin is written in Dart and the implementations are written in native languages. Flutter uses platform channels to communicate with native codes.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q12. Name some popular apps made with Flutter.
+
+- BMW
+- Google Pay
+- Alibaba
+- Beika
+- Dream11
+- eBay
+- Nubank
+- Reflectly
+- Rive
+- Toyota
+- Tencent
+- Hamilton
+- iRobot
+
+_Source: [here](https://flutter.dev/showcase)_
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+# Q13. What are different build modes in Flutter?
+
+The Flutter tooling supports three different build modes while compiling the app. We need to choose the build mode depending upon where we are in the development cycle.
+
+- `debug`: For development purpose, the **hot reload** feature is enabled only in the debug mode.
+- `profile`: For analyzing the app performance. We use DevTools suite to profile app's performance.
+- `release`: For releasing the app when everything is ready.
+
+_To learn more, check [docs](https://docs.flutter.dev/testing/build-modes)._
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q14. What is the difference between `WidgetsApp` and `MaterialApp` in Flutter?
+
+`WidgetsApp` is a convenient widget that wraps a number of widgets that are commonly required for an application. It also provides basic navigation.
+
+`MaterialApp` builds an application that uses the mterial design. It is built upon the `WidgetsApp` and contains some material-design specific functionality, such as **AnimatedTheme**. We certainly don't require `MaterialApp` every time when building a Flutter project. `CupertinoApp` gives iOS like look and feel, or we can even define our custom sets of widgets. 
 
 <div align="right">
     <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
