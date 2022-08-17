@@ -4,7 +4,6 @@ This repository is about common Flutter interview questions and their answers.
 
 ***🚀 If you find this repository useful, kindly give it a star ⭐***
 
-<br />
 <hr />
 
 | Sl.No|  Questions       |
@@ -23,6 +22,22 @@ This repository is about common Flutter interview questions and their answers.
 | 12 |[Name some popular apps made with Flutter.](#q12-name-some-popular-apps-made-with-flutter)|
 | 13 |[What are different build modes in Flutter?](#q13-what-are-different-build-modes-in-flutter)|
 | 14 |[What is the difference between `WidgetsApp` and `MaterialApp` in Flutter?](#q14-what-is-the-difference-between-widgetsapp-and-materialapp-in-flutter)|
+| 15 |Differentiate between final, const and static keyword.|
+| 16 |What are `StatefulWidget` Lifecycle methods. Explain briefly.|
+| 17 |What are keys and why do we need them?|
+| 18 |What is the difference between `Expanded` and `Flexible` widget?|
+| 19 |What is Fat Arrow Notation in Dart?|
+| 20 |What is the purpose of `SafeArea` widget in Flutter?|
+| 21 |What are `Slivers`?|
+| 22 |What is the extension method in Dart?|
+| 23 |Explain the `isMounted` property. How is it important and when to use it?|
+| 24 |What is sound null safety?|
+| 25 |Differentiate between `mainAxisAlignment` and `crossAxisAlignment`.|
+| 26 |What are mixins? How to use them?|
+| 27 |What is the difference between `Container` and `SizedBox` widget?|
+| 28 |What do you mean by Null-aware operators?|
+| 29 |What is `AppLifecycleState`?|
+| 30 |Describe some of the major features of Flutter.|
 
 <br />
 <hr />
