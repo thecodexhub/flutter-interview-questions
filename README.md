@@ -224,7 +224,7 @@ The `static` keyword is used for a class-level variable and method that is the s
 
 - **didChangeDependencies() method:** This method is called just after initState() method when a dependency of this State object changes. For example, if the previous build was referencing an InheritedWidget that changes, this method notifies the object to change.
 
-Generally, subclasses don't override didChangeDependencies() method because the framework calls build() methods after dependency change. But to do some expensive work, let's say some network calls, the method is preferred over doing everything on build() method itself.
+    Generally, subclasses don't override didChangeDependencies() method because the framework calls build() methods after dependency change. But to do some expensive work, let's say some network calls, the method is preferred over doing everything on build() method itself.
 
 - **build() method:** Every time the widget is rebuilt, the build() method is used. This can happen after calling initState(), didChangeDependencies(), or didUpdateWidget(), or after changing the state with a call to setState().
 
@@ -273,7 +273,7 @@ Column(children: [
 ```
 
 <p align="center">
-  <img src="assets/expanded_vs_flexible.PNG" alt="Expanded vs Flexible" width="500px" />
+  <img src="assets/expanded_vs_flexible.PNG" alt="Expanded vs Flexible" width="800px" />
 </p>
 
 <div align="right">
