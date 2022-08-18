@@ -22,12 +22,12 @@ This repository is about common Flutter interview questions and their answers.
 | 12 |[Name some popular apps made with Flutter.](#q12-name-some-popular-apps-made-with-flutter)|
 | 13 |[What are different build modes in Flutter?](#q13-what-are-different-build-modes-in-flutter)|
 | 14 |[What is the difference between `WidgetsApp` and `MaterialApp` in Flutter?](#q14-what-is-the-difference-between-widgetsapp-and-materialapp-in-flutter)|
-| 15 |Differentiate between final, const and static keyword.|
-| 16 |What are `StatefulWidget` Lifecycle methods. Explain briefly.|
-| 17 |What are keys and why do we need them?|
-| 18 |What is the difference between `Expanded` and `Flexible` widget?|
-| 19 |What is Fat Arrow Notation in Dart?|
-| 20 |What is the purpose of `SafeArea` widget in Flutter?|
+| 15 |[Differentiate between final, const and static keyword.](#q15-differentiate-between-final-const-and-static-keyword)|
+| 16 |[What are `StatefulWidget` Lifecycle methods. Explain briefly.](#q16-what-are-statefulwidget-lifecycle-methods-explain-briefly)|
+| 17 |[What are keys and why do we need them?](#q17-what-are-keys-and-why-do-we-need-them)|
+| 18 |[What is the difference between `Expanded` and `Flexible` widget?](#q18-what-is-the-difference-between-expanded-and-flexible-widget)|
+| 19 |[What is Fat Arrow Notation in Dart?](#q19-what-is-fat-arrow-notation-in-dart)|
+| 20 |[What is the purpose of `SafeArea` widget in Flutter?](#q20-what-is-the-purpose-of-safearea-widget-in-flutter)|
 | 21 |What are `Slivers`?|
 | 22 |What is the extension method in Dart?|
 | 23 |Explain the `isMounted` property. How is it important and when to use it?|
@@ -197,6 +197,118 @@ _To learn more, check [docs](https://docs.flutter.dev/testing/build-modes)._
 `WidgetsApp` is a convenient widget that wraps a number of widgets that are commonly required for an application. It also provides basic navigation.
 
 `MaterialApp` builds an application that uses the mterial design. It is built upon the `WidgetsApp` and contains some material-design specific functionality, such as **AnimatedTheme**. We certainly don't require `MaterialApp` every time when building a Flutter project. `CupertinoApp` gives iOS like look and feel, or we can even define our custom sets of widgets. 
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q15. Differentiate between final, const and static keyword.
+
+The `final` keyword defines a variable that can be initialized once and cannot be changed after being assigned a value for the first time.
+
+The `const` keyword defines a constant variable that should not be changed over time.
+
+Now the only difference between the final and const variable is that **final is a runtime-constant**, which in turn means that its value can be assigned at runtime instead of the compile-time that we had for the const keyword.
+
+The `static` keyword is used for a class-level variable and method that is the same for every instance of a class, this means if a data member is static, it can be accessed without creating an object. The static keyword allows data members to persist Values between different instances of a class.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q16. What are `StatefulWidget` Lifecycle methods. Explain briefly.
+
+- **createState() method:** Whenever a StatefulWidget is created, the framework calls this method to create fresh State objects. This method must be overridden.
+
+- **initState() method:** This method is the first method that is called while creating a StatefulWidget class. Here we allocate our resources, which means we can initialize our variable, data, and properties.
+
+- **didChangeDependencies() method:** This method is called just after initState() method when a dependency of this State object changes. For example, if the previous build was referencing an InheritedWidget that changes, this method notifies the object to change.
+
+Generally, subclasses don't override didChangeDependencies() method because the framework calls build() methods after dependency change. But to do some expensive work, let's say some network calls, the method is preferred over doing everything on build() method itself.
+
+- **build() method:** Every time the widget is rebuilt, the build() method is used. This can happen after calling initState(), didChangeDependencies(), or didUpdateWidget(), or after changing the state with a call to setState().
+
+- **didUpdateWidget() method:** This method is called whenever the widget configuration changes. This method exists for triggering side-effects when one of the parameters in the StatefulWidget changes. A typical example is implicitly animated widgets.
+
+- **setState() method:** This method notifies the framework that the internal state of this object has changed. The provided callback must be synchronous which might impact the user interface in the subtree. The framework schedules a build() for this current State object.
+
+- **deactivate() method:** The framework calls this method when the State is removed from the tree, temporarily or permanently.
+
+- **dispose() method:** This method is called when the State is removed from the tree, permanently. After the dispose() method is called, the State object is considered unmounted. Subclasses should override this method to release any resources retained by this object.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q17. What are keys and why do we need them?
+
+Flutter uses keys to preserve the state and to uniquely identify specific widgets within a widget tree. It is used to preserve the state of the `StatefulWidget`s while they are being replaced with other widgets or just moved in the widget tree.
+
+The most common usage of key is when we are dealing with collections of widgets that have the same type; so, without keys, the element tree would not know which state corresponds to which widget, as they would all have the same type.
+
+For an explanation with an example, check this [stackoverflow answer](https://stackoverflow.com/a/50081052).
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q18. What is the difference between `Expanded` and `Flexible` widget?
+
+The only difference between these two widgets is the `Flexible` widget takes only the space needed by the child, whereas the `Expanded` widget enforces its child to take all the available space.
+
+The `Expanded` widget in flutter is shorthand of `Flexible` with the fit set to **FlexFit. tight**.
+
+```dart
+Column(children: [
+  Row(
+    children: [_ExpandedWidget(), _FlexibleWidget()],
+  ),
+  Row(
+    children: [_ExpandedWidget(), _ExpandedWidget()],
+  ),
+  Row(
+    children: [_FlexibleWidget(), _FlexibleWidget()],
+  ),
+]),
+```
+
+<p align="center">
+  <img src="assets/expanded_vs_flexible.PNG" alt="Expanded vs Flexible" width="500px" />
+</p>
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q19. What is Fat Arrow Notation in Dart?
+
+A fat arrow (=>) is used to define a single expression in a function. This is a cleaner way to write functions with a single statement.
+
+Syntax:
+
+```
+ReturnType FunctionName(Params) => Expression;
+```
+
+Example:
+
+```dart
+// Without fat arrow notation
+String findSquare(int n) {
+  return 'The square of $n is ${n * n}.';
+}
+
+// With fat arrow notation
+String findSquare(int n) => 'The square of $n is ${n * n}.';
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q20. What is the purpose of `SafeArea` widget in Flutter?
+
+The `SafeArea` widget insets its child by sufficient padding to avoid intrusions by the operating system. For example, this will indent the child by enough to avoid the status bar at the top of the screen. It will also indent the child by the amount necessary to avoid the Notch, or similar creative physical features of the display.
 
 <div align="right">
     <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
