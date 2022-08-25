@@ -401,15 +401,17 @@ It is an error to call setState unless mounted is true. This property is useful 
 
 The `mainAxisAlignment` determines how the children should be placed along the main axis in a flex layout. Whereas, the `crossAxisAlignment` determines how the children will be placed along the cross axis in a flex layout.
 
-For a `Row` widget: **mainAxisAlignment** --> Horizontal axis
-                    **crossAxisAlignment** --> Vertical axis
+For a `Row` widget: 
+- **mainAxisAlignment** --> Horizontal axis
+- **crossAxisAlignment** --> Vertical axis
 
 <p align="center">
   <img src="assets/row_diagram.png" alt="MainAxisAlignment vs CrossAxisAlignment - Row" />
 </p>
 
-For a `Column` widget: **mainAxisAlignment** --> Vertical axis
-                       **crossAxisAlignment** --> Horizontal axis
+For a `Column` widget: 
+- **mainAxisAlignment** --> Vertical axis
+- **crossAxisAlignment** --> Horizontal axis
 
 <p align="center">
   <img src="assets/column_diagram.png" alt="MainAxisAlignment vs CrossAxisAlignment - Column" />
