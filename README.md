@@ -28,11 +28,11 @@ This repository is about common Flutter interview questions and their answers.
 | 18 |[What is the difference between `Expanded` and `Flexible` widget?](#q18-what-is-the-difference-between-expanded-and-flexible-widget)|
 | 19 |[What is Fat Arrow Notation in Dart?](#q19-what-is-fat-arrow-notation-in-dart)|
 | 20 |[What is the purpose of `SafeArea` widget in Flutter?](#q20-what-is-the-purpose-of-safearea-widget-in-flutter)|
-| 21 |What are `Slivers`?|
-| 22 |What is the extension method in Dart?|
-| 23 |Explain the `isMounted` property. How is it important and when to use it?|
-| 24 |What is sound null safety?|
-| 25 |Differentiate between `mainAxisAlignment` and `crossAxisAlignment`.|
+| 21 |[What are `Slivers`?](#q21-what-are-slivers)|
+| 22 |[What is the extension method in Dart?](#q22-what-is-the-extension-method-in-dart)|
+| 23 |[Explain the `mounted` property. How is it important and when to use it?](#q23-explain-the-mounted-property-how-is-it-important-and-when-to-use-it)|
+| 24 |[What is sound null safety?](#q24-what-is-sound-null-safety)|
+| 25 |[Differentiate between `mainAxisAlignment` and `crossAxisAlignment`.](#q25-differentiate-between-mainaxisalignment-and-crossaxisalignment)|
 | 26 |What are mixins? How to use them?|
 | 27 |What is the difference between `Container` and `SizedBox` widget?|
 | 28 |What do you mean by Null-aware operators?|
@@ -309,6 +309,113 @@ String findSquare(int n) => 'The square of $n is ${n * n}.';
 ## Q20. What is the purpose of `SafeArea` widget in Flutter?
 
 The `SafeArea` widget insets its child by sufficient padding to avoid intrusions by the operating system. For example, this will indent the child by enough to avoid the status bar at the top of the screen. It will also indent the child by the amount necessary to avoid the Notch, or similar creative physical features of the display.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q21. What are `Slivers`?
+
+A sliver is a portion of a scrollable area that you can define to behave in a special way. You can use slivers to achieve custom scrolling effects, such as elastic scrolling.
+
+Under the hood, slivers are used to implement all of the scrollable views you use, including ListView and GridView. Slivers can be compared to a lower-level interface that offers more precise control over the implementation of scrollable areas.
+
+Sliver lets you render child widgets lazily or render only the visible segment of the screen. Additionally, Sliver provides a better experience when you need to scroll a list of items and a grid of items all together as a single unit or create a collapsible header. It makes the overall scrolling effect of large lists effective and efficient.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q22. What is the extension method in Dart?
+
+Extension method allows us to add new functionality on top of existing libraries.For example, you can add extra functionality to the Dart core String library, that are only available in your app.
+
+Syntax to create an extension method:
+
+```
+extension <extension name> on <type> {
+  // (<member definition>)*
+}
+```
+
+Example of an Dart extension method:
+
+```dart
+// an extension method
+extension StringExtension on String {
+  String capitilizeWord() {
+    return this.split(' ').map((word) => word[0].toUpperCase() + word.substring(1)).join(' ');
+  }
+}
+
+// example of using the above extension
+String myString = 'welcome to the flutter world!!!';
+print(myString.capitilizeWord()); // Welcome To The Flutter World!!!
+```
+
+Here is how we can unleash the power of extension methods in Flutter:
+
+```dart
+// an extension on widget
+extension WidgetExtension on Widget {
+  Widget addPadding([double padding = 8.0]) {
+    return Padding(
+      padding: EdgeInsets.all(padding),
+      child: this,
+    );
+  }
+}
+
+// example of using the above extension
+Text('Text widget with the default padding of 8.0').addPadding();
+Text('Text widget with padding of 16.0').addPadding(16.0);
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q23. Explain the `mounted` property. How is it important and when to use it?
+
+The mounted property defines whether the state object, associated with it, is currently in the widget tree.
+
+After creating a State object and before calling initState, the framework **"mounts"** the State object by associating it with a BuildContext. The State object remains mounted until the framework calls dispose, after which time the framework will never ask the State object to build again.
+
+It is an error to call setState unless mounted is true. This property is useful when a method on your state calls setState() but it isn't clear when or how often that method will be called. You can use `if (mounted) {...` to make sure the State exists before calling setState().
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q24. What is sound null safety?
+
+**Sound null safety** makes types in code non-nullable by default and enables special static checks and compiler optimizations to guarantee that null-dereference errors won't appear at runtime because they will be spotted at compile-time and fixed.
+
+**Null safety** is a guarantee within an object-oriented programming language that no object references will have null or void values.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q25. Differentiate between `mainAxisAlignment` and `crossAxisAlignment`.
+
+The `mainAxisAlignment` determines how the children should be placed along the main axis in a flex layout. Whereas, the `crossAxisAlignment` determines how the children will be placed along the cross axis in a flex layout.
+
+For a `Row` widget: **mainAxisAlignment** --> Horizontal axis
+                    **crossAxisAlignment** --> Vertical axis
+
+<p align="center">
+  <img src="assets/row_diagram.png" alt="MainAxisAlignment vs CrossAxisAlignment - Row" />
+</p>
+
+For a `Column` widget: **mainAxisAlignment** --> Vertical axis
+                       **crossAxisAlignment** --> Horizontal axis
+
+<p align="center">
+  <img src="assets/column_diagram.png" alt="MainAxisAlignment vs CrossAxisAlignment - Column" />
+</p>
+
+_Image source: [Flutter Docs](https://docs.flutter.dev/development/ui/layout#aligning-widgets)_
 
 <div align="right">
     <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
