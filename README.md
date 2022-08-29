@@ -498,7 +498,7 @@ Null aware operator allows us to make computations based on whether or not a val
 
 Example of null-aware operators are:
 
-- Optional Chaining Operator (?.):
+- **Optional Chaining Operator (?.):**
 
   We use ?. when we want to call a method/getter on an object if and only if that object is not null (otherwise, return null).
 
@@ -509,7 +509,7 @@ Example of null-aware operators are:
   // String? name = (user == null) ? null : user.name;
   ```
 
-- Default Operator (??):
+- **Default Operator (??):**
 
   We use ?? when you want to evaluate and return an expression if another expression resolves to null. It is also called the **if-null operator** and **coalescing operator**. The null-aware operator is ??, which returns the expression on its left unless that expression’s value is null. In which case it’s null it returns the expression on its right.
 
@@ -521,7 +521,7 @@ Example of null-aware operators are:
   // String? greeting = (hello == null) ? 'Hey' : hello;
   ```
 
-- Logical Nullish Assignment (??=):
+- **Logical Nullish Assignment (??=):**
 
   We use ??= when we want to assign a value to an object if that object is null. Otherwise, it returns the object.
 
