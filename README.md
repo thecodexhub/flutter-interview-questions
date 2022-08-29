@@ -33,10 +33,10 @@ This repository is about common Flutter interview questions and their answers.
 | 23 |[Explain the `mounted` property. How is it important and when to use it?](#q23-explain-the-mounted-property-how-is-it-important-and-when-to-use-it)|
 | 24 |[What is sound null safety?](#q24-what-is-sound-null-safety)|
 | 25 |[Differentiate between `mainAxisAlignment` and `crossAxisAlignment`.](#q25-differentiate-between-mainaxisalignment-and-crossaxisalignment)|
-| 26 |What are mixins? How to use them?|
-| 27 |What is the difference between `Container` and `SizedBox` widget?|
-| 28 |What do you mean by Null-aware operators?|
-| 29 |What is `AppLifecycleState`?|
+| 26 |[What are mixins? How to use them?](#q26-what-are-mixins-how-to-use-them)|
+| 27 |[What is the difference between `Container` and `SizedBox` widget?](#q27-what-is-the-difference-between-container-and-sizedbox-widget)|
+| 28 |[What do you mean by Null-aware operators?](#q28-what-do-you-mean-by-null-aware-operators)|
+| 29 |[What is `AppLifecycleState`?](#q29-what-is-applifecyclestate)|
 | 30 |Describe some of the major features of Flutter.|
 
 <br />
@@ -418,6 +418,134 @@ For a `Column` widget:
 </p>
 
 _Image source: [Flutter Docs](https://docs.flutter.dev/development/ui/layout#aligning-widgets)_
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q26. What are mixins? How to use them?
+
+A mixin is a class whose methods and properties can be used by other classes – without subclassing. It's a reusable chunk of code that can be plugged in to any class that needs this functionality.
+
+Example of a mixin:
+
+```dart
+// To create a mixin, use `mixin` keyword instead of `class`.
+mixin GreetingsMixin {
+  String greeting = 'Hello people';
+
+  void introduce() => print('$greeting, I am Sandip.');
+}
+
+// The following example shows two classes that use the above mixin.
+class Something extends MyClass with GreetingsMixin {
+  // ...
+}
+
+class SomethingElse extends MyAnotherClass with GreetingsMixin {
+  SomethingElse() {
+    greeting = 'Hi everyone';
+  }
+}
+
+// Here is how to use them
+SomethingElse obj = SomethingElse();
+obj.introduce();  // Hi everyone, I am Sandip.
+```
+
+Sometimes you want to restrict from mixing in functionality to classes that have no deal with the mixin. To restrict a mixin, use the 'on' keyword to specify the required subclass.
+
+```dart
+class SocialMedia {
+  // ...
+}
+
+// Create a mixin restricted on [SocialMedia] class
+mixin SocialMediaGreetings on SocialMedia {
+  String greeting = 'Hello people';
+
+  void introduce() => print('$greeting, I am Sandip.');
+}
+
+// Only classes that extend or implement the [SocialMedia] class
+// can use the mixin [SocialMediaGreetings]
+class Twitter extends SocialMedia with SocialMediaGreetings {
+  Twitter() {
+    greeting = 'Hello Tweeple';
+  }
+}
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q27. What is the difference between `Container` and `SizedBox` widget?
+
+**SizedBox** is a widget for giving some constant height or width between two widgets. It does not contain any decorative properties just like color, shape, borderRadius etc.
+
+On the other hand **Container** is a widget that any person can modify according to their needs.
+
+When used for whitespace, there is a linter warning to prefer SizedBox instead of Container. Because a Container is a heavier widget than a SizedBox, and as bonus, SizedBox has a const constructor, so it won't even create a new instance during runtime.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q28. What do you mean by Null-aware operators?
+
+Null aware operator allows us to make computations based on whether or not a value is null.
+
+Example of null-aware operators are:
+
+- Optional Chaining Operator (?.):
+
+  We use ?. when we want to call a method/getter on an object if and only if that object is not null (otherwise, return null).
+
+  ```dart
+  String? name = user?.name;
+
+  // This code is same as
+  // String? name = (user == null) ? null : user.name;
+  ```
+
+- Default Operator (??):
+
+  We use ?? when you want to evaluate and return an expression if another expression resolves to null. It is also called the **if-null operator** and **coalescing operator**. The null-aware operator is ??, which returns the expression on its left unless that expression’s value is null. In which case it’s null it returns the expression on its right.
+
+  ```dart
+  String? hello;
+  String? greeting = hello ?? 'Hey';
+
+  // This code is same as
+  // String? greeting = (hello == null) ? 'Hey' : hello;
+  ```
+
+- Logical Nullish Assignment (??=):
+
+  We use ??= when we want to assign a value to an object if that object is null. Otherwise, it returns the object.
+
+  ```dart
+  int? x;
+  x ??= 3;  // Assigns 3 to the variable `x`
+  x ??= 5;  // As x is not null now, it's value is still 3
+  ```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q29. What is `AppLifecycleState`?
+
+The `AppLifecycleState` defines the state that an application can be.
+
+- **detached (AppLifecycleState.detached):** This means the application is still hosted on flutter engine but is detached from any host views. It can either be in the progress of attaching a view when engine was first initializes, or after the view being destroyed due to a Navigator pop.
+
+- **inactive (AppLifecycleState.inactive):** This means the application is in an inactive state and is not receiving user input. Simply we can say the app is in the foreground and not running in the background on your mobile phone.
+
+- **paused (AppLifecycleState.paused):** This means the application is not currently visible to the user, not responding to user input, and running in the background.
+
+- **resumed (AppLifecycleState.resumed):** This means the application is visible and responding to user input.
 
 <div align="right">
     <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
