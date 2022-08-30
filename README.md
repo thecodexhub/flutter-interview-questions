@@ -37,7 +37,7 @@ This repository is about common Flutter interview questions and their answers.
 | 27 |[What is the difference between `Container` and `SizedBox` widget?](#q27-what-is-the-difference-between-container-and-sizedbox-widget)|
 | 28 |[What do you mean by Null-aware operators?](#q28-what-do-you-mean-by-null-aware-operators)|
 | 29 |[What is `AppLifecycleState`?](#q29-what-is-applifecyclestate)|
-| 30 |Describe some of the major features of Flutter.|
+| 30 |[What is the difference between `NetworkImage` and `Image.network` in flutter?](#q30-what-is-the-difference-between-networkimage-and-imagenetwork-in-flutter)|
 
 <br />
 <hr />
@@ -546,6 +546,16 @@ The `AppLifecycleState` defines the state that an application can be.
 - **paused (AppLifecycleState.paused):** This means the application is not currently visible to the user, not responding to user input, and running in the background.
 
 - **resumed (AppLifecycleState.resumed):** This means the application is visible and responding to user input.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q30. What is the difference between `NetworkImage` and `Image.network` in flutter?
+
+`NetworkImage` class creates an object that provides an image from the src URL passed to it. It is not a widget and does not output an image to the screen.
+
+`Image.network` creates a widget that displays an image on the screen. It is just a named constructor on the **Image** class. It sets the image property using the **NetworkImage** . This image property is then used to display the image.
 
 <div align="right">
     <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
