@@ -6,8 +6,8 @@ This repository is about common Flutter interview questions and their answers.
 
 <hr />
 
-| Sl.No|  Questions       |
-| :---: |:---             |
+| Sl no |  Questions       |
+|-------|------------------|
 | 01 |[What is Flutter?](#q1-what-is-flutter)|
 | 02 |[What is Dart and Why does Flutter use it?](#q2-what-is-dart-and-why-does-flutter-use-it)|
 | 03 |[What is `pubspec.yaml` file and what does it do?](#q3-what-is-pubspecyaml-file-and-what-does-it-do)|
