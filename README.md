@@ -38,6 +38,16 @@ This repository is about common Flutter interview questions and their answers.
 | 28 |[What do you mean by Null-aware operators?](#q28-what-do-you-mean-by-null-aware-operators)|
 | 29 |[What is `AppLifecycleState`?](#q29-what-is-applifecyclestate)|
 | 30 |[What is the difference between `NetworkImage` and `Image.network` in flutter?](#q30-what-is-the-difference-between-networkimage-and-imagenetwork-in-flutter)|
+| 31 |Explain async, await and Future.|
+| 32 |What is `resizeToAvoidBottomInset`? When should we use it?|
+| 33 |What is `TextEditingController`?|
+| 34 |What is `Animation` and `AnimationController`?|
+| 35 |What is `InheritedWidget` in Flutter?|
+| 36 |What is Flutter Tree Shaking?|
+| 37 |What is an `AspectRatio` widget used for?|
+| 38 |What is `vsync`? Explain.|
+| 39 |Differentiate between `Stream` and `Future` in Flutter.|
+| 40 |What is `assert` used for in Dart and Flutter?|
 
 <br />
 <hr />
