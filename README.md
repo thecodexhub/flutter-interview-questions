@@ -1,6 +1,6 @@
 # Flutter Interview Questions
 
-This repository is about common Flutter interview questions and their answers.
+This repository contains common Flutter interview questions and their answers.
 
 ***🚀 If you find this repository useful, kindly give it a star ⭐***
 
@@ -570,3 +570,7 @@ The `AppLifecycleState` defines the state that an application can be.
 <div align="right">
     <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
 </div>
+
+## Q32. Explain async, await and Future.
+
+
