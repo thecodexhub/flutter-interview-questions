@@ -38,16 +38,16 @@ This repository contains common Flutter interview questions and their answers.
 | 28 |[What do you mean by Null-aware operators?](#q28-what-do-you-mean-by-null-aware-operators)|
 | 29 |[What is `AppLifecycleState`?](#q29-what-is-applifecyclestate)|
 | 30 |[What is the difference between `NetworkImage` and `Image.network` in flutter?](#q30-what-is-the-difference-between-networkimage-and-imagenetwork-in-flutter)|
-| 31 |Explain async, await and Future.|
-| 32 |What is `resizeToAvoidBottomInset`? When should we use it?|
-| 33 |What is `TextEditingController`?|
-| 34 |What is `Animation` and `AnimationController`?|
-| 35 |What is `InheritedWidget` in Flutter?|
-| 36 |What is Flutter Tree Shaking?|
-| 37 |What is an `AspectRatio` widget used for?|
-| 38 |What is `vsync`? Explain.|
-| 39 |Differentiate between `Stream` and `Future` in Flutter.|
-| 40 |What is `assert` used for in Dart and Flutter?|
+| 31 |[Explain async, await and Future.](#q31-explain-async-await-and-future)|
+| 32 |[What is `resizeToAvoidBottomInset`? When should we use it?](#q32-what-is-resizetoavoidbottominset-when-should-we-use-it)|
+| 33 |[What is `TextEditingController`?](#q33-what-is-texteditingcontroller)|
+| 34 |[What is `Animation` and `AnimationController`?](#q34-what-is-animation-and-animationcontroller)|
+| 35 |[What is `InheritedWidget` in Flutter?](#q35-what-is-inheritedwidget-in-flutter)|
+| 36 |[What is Flutter Tree Shaking?](#q36-what-is-flutter-tree-shaking)|
+| 37 |[What is an `AspectRatio` widget used for?](#q37-what-is-an-aspectratio-widget-used-for)|
+| 38 |[What is `vsync`? Explain.](#q38-what-is-vsync-explain)|
+| 39 |[Differentiate between `Stream` and `Future` in Flutter.](#q39-differentiate-between-stream-and-future-in-flutter)|
+| 40 |[What is `assert` used for in Dart and Flutter?](#q40-what-is-assert-used-for-in-dart-and-flutter)|
 
 <br />
 <hr />
@@ -571,6 +571,229 @@ The `AppLifecycleState` defines the state that an application can be.
     <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
 </div>
 
-## Q32. Explain async, await and Future.
+## Q31. Explain async, await and Future.
 
+The `async` and `await` are keywords in Dart that enable asynchronous programming. They make it easier to write asynchronous code that is readable and easier to maintain.
 
+`Future` is a core Dart library that represents an asynchronous operation that will complete in the future. A `Future` object is returned from an asynchronous function to represent a value that will be available at some point in the future.
+
+In Flutter, `async` and `await` are used to perform asynchronous operations, such as making HTTP requests or reading from a database. The Future object is used to represent the result of an asynchronous operation and is often passed to await in an async function to wait for the result to be available.
+
+```dart
+Future<String> fetchData() async {
+  // Asynchronous operation
+  return 'Data';
+}
+
+void main() async {
+  String data = await fetchData();
+  print(data);
+}
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q32. What is `resizeToAvoidBottomInset`? When should we use it?
+
+The `resizeToAvoidBottomInset` is a property in the `Scaffold` widget. It is a boolean property that determines whether the body of the `Scaffold` should be resized to avoid the on-screen keyboard when it is displayed.
+
+It should be used when the body of the `Scaffold` contains a form or text input fields, and it is desirable to avoid having the input fields covered by the on-screen keyboard when the user is entering text.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q33. What is `TextEditingController`?
+
+The `TextEditingController` is a class in the Flutter framework that provides control over the text in a text field. It allows you to read and modify the text, set the selection, and listen to changes to the text.
+
+It is typically used in conjunction with a `TextField` widget to create an editable text input field in a Flutter application. The `TextEditingController` is assigned to the `controller` property of the `TextField`, and it can be used to retrieve the entered text, set the initial text, or respond to changes in the text.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q34. What is `Animation` and `AnimationController`?
+
+`Animation` is a way to describe a graphical representation of a changing value over time. It can be used to animate the properties of widgets, such as size, color, position, and opacity, to create smooth and visually appealing transitions.
+
+`AnimationController` is a central class in Flutter's animation framework that is used to control the animations. It defines the duration, direction, and other properties of an animation, and provides methods for starting, stopping, and monitoring the progress of the animation.
+
+In Flutter, animations can be created by using the `AnimationController` in combination with `Tween` and `Curve` objects, which define the animation's starting and ending values and the progression of the animation over time.
+
+```dart
+class MyAnimation extends StatefulWidget {
+  @override
+  _MyAnimationState createState() => _MyAnimationState();
+}
+
+class _MyAnimationState extends State<MyAnimation>
+    with SingleTickerProviderStateMixin {
+  AnimationController _controller;
+  Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: Duration(seconds: 2),
+      vsync: this,
+    );
+    _animation = Tween<double>(begin: 0, end: 300).animate(_controller)
+      ..addListener(() {
+        setState(() {});
+      });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: _animation.value,
+      width: _animation.value,
+      child: FlutterLogo(),
+    );
+  }
+}
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q35. What is `InheritedWidget` in Flutter?
+
+`InheritedWidget` is a class in the Flutter framework that is used to pass data down the widget tree. It provides a convenient way to share data between widgets without having to pass the data explicitly through each individual widget in the tree.
+
+An `InheritedWidget` is a widget that, when it is inserted into the widget tree, can be accessed by descendant widgets using the `context.inheritFromWidgetOfExactType` method. This allows data to be passed down the tree to widgets that are nested several levels deep, without having to pass the data through every single widget in between.
+
+`InheritedWidget` is often used to provide data to descendant widgets that is frequently required, such as the theme or the current locale. By wrapping your application in an `InheritedWidget`, you can make this data available to all of your widgets, and avoid having to pass it down through multiple levels of the widget tree.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q36. What is Flutter Tree Shaking?
+
+`Tree shaking` is a technique used by modern compilers to reduce the size of the output by eliminating code that is not being used. In Flutter, `tree shaking` refers to the process of removing unused widgets, libraries, and other code from the final build of an application. This helps to reduce the size of the application and improve performance by only including the code that is actually used by the application.
+
+Tree shaking in Flutter works by analyzing the dependencies of each widget and only including the widgets that are actually used in the final build. This means that if a widget or library is not used, it will not be included in the final build, reducing the size and improving the performance of the application.
+
+In summary, Flutter Tree shaking is a feature that helps to optimize the size and performance of Flutter applications by only including the code that is actually used.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q37. What is an `AspectRatio` widget used for?
+
+The `AspectRatio` widget in Flutter is used to ensure that a widget maintains a specific aspect ratio, regardless of the size of the parent container. This can be useful in cases where you want a widget to have a specific shape, such as a square or a rectangle with a fixed width-to-height ratio.
+
+The aspect ratio is defined as the width of the widget divided by its height. The `AspectRatio` widget takes the aspect ratio as an argument and sets the width or height of the widget such that the aspect ratio is maintained. The other dimension is automatically adjusted to match.
+
+For example, if you want to create a square widget, you can wrap the widget in an AspectRatio widget with an aspect ratio of 1.0, and the widget will always be square, regardless of the size of the parent container.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q38. What is `vsync`? Explain.
+
+The `vsync` in Flutter is an abbreviation for "vertical synchronization". It's a feature that ensures that animations and user interface updates are synchronized with the device's screen refresh rate. This prevents visual artifacts, such as screen tearing or stuttering, which can occur when the device's screen refresh rate and the animation's frame rate are not in sync.
+
+In Flutter, `vsync` is provided through the `TickerProvider` interface, which is a factory for creating `Ticker` objects. The `Ticker` objects are used to drive animations, and the `TickerProvider` provides the `vsync` signal that ensures that animations are in sync with the device's screen refresh rate.
+
+To use `vsync` in Flutter, a `TickerProvider` must be passed to the `AnimationController` when it is created. This allows the `AnimationController` to access the `vsync` signal and use it to drive animations.
+
+```dart
+class MyAnimation extends StatefulWidget {
+  @override
+  _MyAnimationState createState() => _MyAnimationState();
+}
+
+class _MyAnimationState extends State<MyAnimation>
+    with SingleTickerProviderStateMixin {
+  AnimationController _controller;
+  Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: Duration(seconds: 2),
+      vsync: this,
+    );
+    _animation = Tween<double>(begin: 0, end: 300).animate(_controller)
+      ..addListener(() {
+        setState(() {});
+      });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: _animation.value,
+      width: _animation.value,
+      child: FlutterLogo(),
+    );
+  }
+}
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q39. Differentiate between `Stream` and `Future` in Flutter.
+
+`Stream` and `Future` are both used for asynchronous programming in Flutter, but they serve different purposes.
+
+`Future` is a one-time asynchronous operation that returns a single value. It represents a value that will be available in the future, either a result or an error. Futures are often used for short-lived operations that complete quickly, such as fetching data from a database or an API.
+
+`Stream`, on the other hand, is a sequence of asynchronous events. A stream can emit multiple values over time, either in response to user interaction or based on some other event. Streams are useful for continuous or long-lived operations, such as listening to updates from a sensor, receiving messages from a chat service, or playing a video.
+
+In summary, the main difference between `Future` and `Stream` is that `Future` represents a single value that will be available in the future, while `Stream` represents a sequence of values that are emitted over time.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q40. What is `assert` used for in Dart and Flutter?
+
+The `assert` is a statement in Dart and Flutter that checks if a boolean condition is true and triggers an exception if the condition is false. It is typically used for debugging purposes, as it is intended to be used in development only and will be ignored in a production environment.
+
+An `assert` statement takes the following form:
+
+```
+assert(condition);
+```
+
+where `condition` is the boolean expression to be evaluated. If `condition` is `true`, the `assert` statement does nothing. However, if `condition` is `false`, the `assert` statement throws an `AssertionError` with a message indicating that the condition failed.
+
+Here's an example of using an `assert` statement to check if a variable has a certain value:
+
+```dart
+int score = 50;
+assert(score >= 60, "Score must be at least 60");
+```
+
+In this example, if `score` is less than 60, the `assert` statement will throw an `AssertionError` with the message `Score must be at least 60`.
+
+In summary, `assert` is used in Dart and Flutter to validate conditions during development and help catch potential bugs before they make it to production.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
