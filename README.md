@@ -1,8 +1,17 @@
-# Flutter Interview Questions
+<div align="center">
+  <img height="60" src="https://img.icons8.com/color/256/flutter.png">
+  <h1>Flutter Interview Questions</h1>
 
-This repository contains common Flutter interview questions and their answers.
+---
 
-***🚀 If you find this repository useful, kindly give it a star ⭐***
+<span>This repository contains common Flutter interview questions and their answers.🚀 From basic to advanced, test your understanding of Flutter and Dart, brush up on your knowledge 💪, or get ready for your next coding interview! I add new questions to this repository on a regular basis (along with answers 😉). Best of luck to all of you. ❤ Last updated: <a href=#20230318><b>Feb 18th, 2023</b></a>
+</span>
+
+Feel free to reach out to me! 😊 <br />
+<a href="https://www.instagram.com/thecodexhub">Instagram</a> || <a href="https://www.twitter.com/thecodexhub">Twitter</a> || <a href="https://www.linkedin.com/in/sandippramanik">LinkedIn</a> || <a href="https://www.medium.com/@thecodexhubofficial">Medium Blog</a>
+</div>
+
+| If you find this repository useful, kindly give it a star ⭐ 💪🏼 Thank you and have fun! |
 
 <hr />
 
