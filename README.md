@@ -4,14 +4,16 @@
 
 ---
 
-<span>This repository contains common Flutter interview questions and their answers.🚀 From basic to advanced, test your understanding of Flutter and Dart, brush up on your knowledge 💪, or get ready for your next coding interview! I add new questions to this repository on a regular basis (along with answers 😉). Best of luck to all of you. ❤ Last updated: <a href=#20230318><b>Feb 18th, 2023</b></a>
+<span>This repository contains common Flutter interview questions and their answers.🚀 From basic to advanced, test your understanding of Flutter and Dart, brush up on your knowledge 💪, or get ready for your next coding interview! I add new questions to this repository on a regular basis (along with answers 😉). Best of luck to all of you. ❤ <br />• Last updated: <a href=#20230318><b>Feb 18th, 2023</b></a>
 </span>
 
-Feel free to reach out to me! 😊 <br />
-<a href="https://www.instagram.com/thecodexhub">Instagram</a> || <a href="https://www.twitter.com/thecodexhub">Twitter</a> || <a href="https://www.linkedin.com/in/sandippramanik">LinkedIn</a> || <a href="https://www.medium.com/@thecodexhubofficial">Medium Blog</a>
+<em>Feel free to reach out to me!</em> 😀 <br />
+<a href="https://www.instagram.com/thecodexhub">Instagram</a> • <a href="https://www.twitter.com/thecodexhub">Twitter</a> • <a href="https://www.linkedin.com/in/sandippramanik">LinkedIn</a> • <a href="https://www.medium.com/@thecodexhubofficial">Medium Blog</a>
+
+| If you find this repository useful, kindly give it a star ⭐. Thank you and have fun! 🔥   |
+|---|
 </div>
 
-| If you find this repository useful, kindly give it a star ⭐ 💪🏼 Thank you and have fun! |
 
 <hr />
 
