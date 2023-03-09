@@ -4,7 +4,7 @@
 
 ---
 
-<span>This repository contains common Flutter interview questions and their answers.🚀 From basic to advanced, test your understanding of Flutter and Dart, brush up on your knowledge 💪, or get ready for your next coding interview! I add new questions to this repository on a regular basis (along with answers 😉). Best of luck to all of you. ❤ <br />• Last updated: <a href=#20230318><b>Feb 18th, 2023</b></a>
+<span>This repository contains common Flutter interview questions and their answers.🚀 From basic to advanced, test your understanding of Flutter and Dart, brush up on your knowledge 💪, or get ready for your next coding interview! I add new questions to this repository on a regular basis (along with answers 😉). Best of luck to all of you. ❤ <br />• Last updated: <a href=#20230310><b>Mar 10th, 2023</b></a>
 </span>
 
 <em>Feel free to reach out to me!</em> 😀 <br />
@@ -79,6 +79,26 @@
 | 58 |[What is the purpose of the scaffold widget in Flutter?](#q58-what-is-the-purpose-of-the-scaffold-widget-in-flutter)|
 | 59 |[What is the purpose of the Expanded widget in Flutter?](#q59-what-is-the-purpose-of-the-expanded-widget-in-flutter)|
 | 60 |[How do you handle user input in Flutter?](#q60-how-do-you-handle-user-input-in-flutter)|
+| 61 |[What is the purpose of the `LayoutBuilder` widget in Flutter?](#q61-what-is-the-purpose-of-the-layoutbuilder-widget-in-flutter)|
+| 62 |[What is the purpose of the `SingleChildScrollView` widget in Flutter?](#q62-what-is-the-purpose-of-the-singlechildscrollview-widget-in-flutter)|
+| 63 |[What is the purpose of the `Stack` widget in Flutter?](#q63-what-is-the-purpose-of-the-stack-widget-in-flutter)|
+| 64 |[What is a `Theme` in Flutter?](#q64-what-is-a-theme-in-flutter)|
+| 65 |[What is the purpose of the `Visibility` widget in Flutter?](#q65-what-is-the-purpose-of-the-visibility-widget-in-flutter)|
+| 66 |[How do you navigate between screens in Flutter?](#q66-how-do-you-navigate-between-screens-in-flutter)|
+| 67 |[What is a modal bottom sheet in Flutter?](#q67-what-is-a-modal-bottom-sheet-in-flutter)|
+| 68 |[How do you use the `ValueNotifier` class in Flutter?](#q68-how-do-you-use-the-valuenotifier-class-in-flutter)|
+| 69 |[How do you use the `Positioned` widget in Flutter?](#q69-how-do-you-use-the-positioned-widget-in-flutter)|
+| 70 |[How do you pass data between screens in Flutter?](#q70-how-do-you-pass-data-between-screens-in-flutter)|
+| 71 |[What is a `MediaQuery` in Flutter?](#q71-what-is-a-mediaquery-in-flutter)|
+| 72 |[What is the purpose of the `didUpdateWidget` method in a StatefulWidget?](#q72-what-is-the-purpose-of-the-didupdatewidget-method-in-a-statefulwidget)|
+| 73 |[What is a `CustomPainter` in Flutter?](#q73-what-is-a-custompainter-in-flutter)|
+| 74 |[What is the purpose of the `AnimatedBuilder` widget in Flutter?](#q74-what-is-the-purpose-of-the-animatedbuilder-widget-in-flutter)|
+| 75 |[What is the purpose of the `Navigator` class in Flutter?](#q75-what-is-the-purpose-of-the-navigator-class-in-flutter)|
+| 76 |What is the purpose of the `AnimatedSwitcher` widget in Flutter?|
+| 77 |What is the purpose of the `FittedBox` widget in Flutter?|
+| 78 |What is a State Management in Flutter?|
+| 79 |What is the difference between Cupertino and Material Design in Flutter?|
+| 80 |What is the purpose of the Material Design Icons package in Flutter?|
 
 <br />
 <hr />
@@ -1246,6 +1266,457 @@ Here is a simple process for handling user input in Flutter:
 4. If the state has changed, call `setState()` to rebuild the UI with the updated state.
 
 It's important to note that the specific process for handling user input will vary depending on the widget and the requirements of the app. 
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q61. What is the purpose of the `LayoutBuilder` widget in Flutter?
+
+The `LayoutBuilder` widget in Flutter is used to get the constraints of the parent widget and build child widgets based on these constraints.
+
+The purpose of `LayoutBuilder` is to enable creating responsive UIs that adapt to the size of their parent widget. The `LayoutBuilder` widget provides a callback that takes in the `BoxConstraints` of the parent widget, which represent the minimum and maximum width and height of the widget.
+
+These constraints can be used to build child widgets that fit within the available space. For example, the `MediaQuery.of(context).size` property can be used to to get the screen size, and then using the `LayoutBuilder` widget to create a child widget that adjusts its size based on the screen size.
+
+Here's an example of using LayoutBuilder to create a widget that adjusts its size based on the available space:
+
+```dart
+LayoutBuilder(
+  builder: (BuildContext context, BoxConstraints constraints) {
+    return Container(
+      width: constraints.maxWidth * 0.5,
+      height: constraints.maxHeight * 0.5,
+      child: Text('This widget will take up 50% of the available space'),
+    );
+  },
+);
+```
+
+In this example, the `Container` widget will take up 50% of the available width and height, based on the `BoxConstraints` provided by the `LayoutBuilder`. This allows the widget to adjust its size based on the available space, making it more responsive.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q62. What is the purpose of the `SingleChildScrollView` widget in Flutter?
+
+The `SingleChildScrollView` widget in Flutter is used to make its child widget scrollable if it overflows the parent container.
+
+The purpose of `SingleChildScrollView` is to provide a way to display content that is larger than the available space. This widget is often used when a widget contains a large amount of content that doesn't fit on the screen, such as a long list of items, a large image, or a form with many input fields.
+
+By wrapping the child widget in a `SingleChildScrollView`, the user can scroll through the content to see all of it. The `SingleChildScrollView` widget takes up as much space as its child widget requires, and allows the child to be scrolled vertically or horizontally to view all of its content.
+
+Here's an example of using `SingleChildScrollView` to create a scrollable list:
+
+```dart
+SingleChildScrollView(
+  child: Column(
+    children: <Widget>[
+      ListTile(title: Text('Item 1')),
+      ListTile(title: Text('Item 2')),
+      ListTile(title: Text('Item 3')),
+      // Add more items here...
+    ],
+  ),
+);
+```
+
+In this example, the `SingleChildScrollView` wraps a `Column` widget containing several `ListTile` widgets. If the content of the `Column` is too large to fit on the screen, the user can scroll through it to see all of the items.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q63. What is the purpose of the `Stack` widget in Flutter?
+
+In Flutter, the `Stack` widget is used to place widgets on top of each other in a specific order. It allows to position widgets at specific locations within the parent widget by using offsets or alignment.
+
+The main purpose of the `Stack` widget is to provide a way to overlay widgets on top of each other. For example, if we want to display a text label over an image, we can use a `Stack` widget to place the text label on top of the image.
+
+```dart
+Stack(
+  children: [
+    Image.network('https://picsum.photos/250?image=9'),
+    Center(child: Text('Hello, World!'),
+  ],
+),
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q64. What is a `Theme` in Flutter?
+
+In Flutter, a `Theme` is a widget that provides a way to customize the visual appearance of an app. A `Theme` widget can be used to set the colors, fonts, and other visual properties for a specific part or the entire app.
+
+Using a `Theme` widget, we can define a set of colors, fonts, and other properties that apply to all widgets within the Theme's subtree. This can make it easier to maintain consistency in the app's visual appearance and reduce the amount of duplicated code.
+
+Here are some common use cases for using a Theme widget:
+
+- Setting the app's primary and accent colors
+- Defining text styles for various widget types (e.g. headings, body text, etc.)
+- Setting default button styles
+- Defining shapes and elevations for Material Design widgets
+- Setting default padding and margins for widgets
+
+```dart
+MaterialApp(
+  theme: ThemeData(
+    primaryColor: Colors.blue,
+    accentColor: Colors.orange,
+    textTheme: TextTheme(
+      headline1: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+      bodyText1: TextStyle(fontSize: 18),
+    ),
+  ),
+),
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q65. What is the purpose of the `Visibility` widget in Flutter?
+
+In Flutter, the `Visibility` widget is used to control the visibility of a child widget based on a certain condition. The `Visibility` widget can be used to show or hide a widget dynamically, based on user interactions or other conditions.
+
+The `Visibility` widget has a visible property that determines whether its child is visible or not. If visible is set to true, the child is visible, and if it's set to false, the child is hidden.
+
+Here are some use cases for the `Visibility` widget:
+
+- Hiding/showing a widget based on a certain condition (e.g. a user's authentication status)
+- Hiding/showing a widget based on user interactions (e.g. a dropdown menu that appears when a button is pressed)
+- Animating the appearance/disappearance of a widget (e.g. fading in/out a widget when it appears/disappears)
+
+```dart
+Visibility(
+  visible: true, // currently visible, set to `false` to disappear 
+  child: Text(
+    'Hello, World!',
+    style: TextStyle(fontSize: 24),
+  ),
+),
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q66. How do you navigate between screens in Flutter?
+
+In Flutter, we can navigate between screens using the `Navigator` class. We can push a new screen onto the stack using the `push` method, and pop the current screen off the stack using the `pop` method. We can also use named routes to navigate between screens. To do this, we need to define a map of named routes in the `MaterialApp`, and then use the `Navigator.pushNamed` method to navigate to a specific named route.
+
+Here are the basic steps to navigate between screens in Flutter:
+
+1. Define the screens or pages as separate widgets, each with its own unique name and content.
+2. Use the `Navigator.push()` method to push a new Route onto the stack.
+   ```dart
+   Navigator.push(
+     context,
+     MaterialPageRoute(builder: (context) => SecondScreen()),
+   );
+   ```
+3. Now, to go back to the previous screen use the `Navigator.pop()` method.
+   ```dart
+   Navigator.pop(context),
+   ```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q67. What is a modal bottom sheet in Flutter?
+
+In Flutter, a modal bottom sheet is a type of popup that is displayed at the bottom of the screen and covers a portion of the parent widget. Modal bottom sheets are commonly used to display additional options or information that are related to the parent widget, but require additional user input to complete an action.
+
+Modal bottom sheets are created using the `showModalBottomSheet()` method, which takes a `BuildContext` and a `builder` argument. The `builder` argument is a callback that returns a widget that represents the content of the modal bottom sheet.
+
+```dart
+showModalBottomSheet(
+  context: context,
+  builder: (BuildContext context) {
+    return Container(
+      // WRITE YOUR CODE HERE
+    );
+  },
+);
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q68. How do you use the `ValueNotifier` class in Flutter?
+
+In Flutter, the `ValueNotifier` class is a simple class that provides a way to listen for changes to a value and update the UI accordingly. It's a convenient way to manage state for a small number of widgets, and is often used in combination with the `ChangeNotifier` and `Provider` classes from the Flutter `provider` package.
+
+To use `ValueNotifier`, first we need an instance of the class with an initial value:
+
+```dart
+final ValueNotifier<String> _myValue = ValueNotifier<String>('Initial Value');
+```
+
+To listen for changes to the value, we can use the `ValueListenableBuilder` widget. This widget takes a `ValueNotifier` and a `builder` function, and rebuilds its child whenever the value changes:
+
+```dart
+ValueListenableBuilder<String>(
+  valueListenable: _myValue,
+  builder: (BuildContext context, String value, Widget? child) {
+    return Text(value);
+  },
+),
+```
+
+To update the value of a `ValueNotifier`, simply set its value property:
+
+```dart
+_myValue.value = 'New Value';
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q69. How do you use the `Positioned` widget in Flutter?
+
+In Flutter, the `Positioned` widget is used to position a child widget within a `Stack` widget. The `Positioned` widget takes four optional arguments: `left`, `top`, `right`, and `bottom`, which specify the position of the child widget relative to the edges of the parent `Stack` widget.
+
+For example:
+
+```dart
+Stack(
+  children: [
+    Positioned(
+      left: 10,
+      top: 10,
+      child: Text('Hi there!'),
+    ),
+    Positioned(
+      right: 10,
+      bottom: 10,
+      child: Text('Bye there!'),
+    ),
+  ],
+),
+```
+
+In this example, we create a Stack widget with two child widgets that are positioned at opposite corners of the Stack. The first child widget is positioned 10 pixels from the left and top edges of the Stack, while the second child widget is positioned 10 pixels from the right and bottom edges of the Stack.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q70. How do you pass data between screens in Flutter?
+
+In Flutter, we can pass data between screens using various methods. Some of the most commonly used methods are:
+
+1. **Using constructor parameters**: We can pass data between screens by passing the required data as parameters to the constructor of the destination screen.
+   
+   ```dart
+   Navigator.push(
+     context,
+     MaterialPageRoute(
+       builder: (context) => SecondScreen(data: 'Hello World!'),
+     ),
+   );
+
+   class SecondScreen extends StatelessWidget {
+     final String data;
+
+     SecondScreen({required this.data});
+
+     @override
+     Widget build(BuildContext context) {
+       return Scaffold( ... );
+     }
+   }
+   ```
+
+2. **Using named routes**: We can define named routes in the app and pass data as arguments to these routes.
+   
+   ```dart
+   Navigator.pushNamed(
+     context,
+     '/second',
+     arguments: 'Hello World!',
+   );
+
+   class SecondScreen extends StatelessWidget {
+     @override
+     Widget build(BuildContext context) {
+       final String data = ModalRoute.of(context)!.settings.arguments as String;
+
+       return Scaffold( ... );
+     }
+   }
+   ```
+
+3. **Using a state management library**: We can use a state management library like Provider, Riverpod, Bloc, or MobX to manage the state of the app and pass data between screens. This approach is especially useful when complex data needs to be shared between multiple screens.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q71. What is a `MediaQuery` in Flutter?
+
+In Flutter, a `MediaQuery` is a widget that provides information about the device's screen size, orientation, and other display-related characteristics. It is typically used to create responsive UIs that adapt to different screen sizes and densities.
+
+The `MediaQuery` widget is usually placed at the root of the widget tree, and it provides a `MediaQueryData` object that contains various properties related to the device's display, such as:
+
+- **Screen size**: `MediaQueryData.size` returns the size of the device's screen in logical pixels (i.e., independent of the device's pixel density).
+- **Screen orientation**: `MediaQueryData.orientation` returns the orientation of the device's screen (portrait or landscape).
+- **Pixel density**: `MediaQueryData.devicePixelRatio` returns the device's pixel density, which is the ratio between physical pixels and logical pixels.
+- **Text scaling factor**: `MediaQueryData.textScaleFactor` returns the user's preferred text scaling factor, which can be used to adjust the font size of text in the app.
+- **Platform**: `MediaQueryData.platformBrightness` returns the platform's preferred brightness mode (light or dark).
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q72. What is the purpose of the `didUpdateWidget` method in a StatefulWidget?
+
+In Flutter, `StatefulWidget` is a widget that has mutable state that can change over time. When the state of a `StatefulWidget` changes, the framework rebuilds the widget tree to reflect the new state.
+
+The `didUpdateWidget` method is a lifecycle method that is called when the framework rebuilds a `StatefulWidget`. Specifically, it is called when a new instance of the widget is created and inserted into the widget tree, and when the widget's configuration (i.e., the values of its properties) changes.
+
+The purpose of the `didUpdateWidget` method is to allow the widget to respond to changes in its configuration. In particular, it provides an opportunity for the widget to update its state in response to changes in its properties. This can be useful, for example, if the widget needs to re-fetch data from a network service or rebuild its child widgets in response to a change in its configuration.
+
+```dart
+class MyWidget extends StatefulWidget {
+  final String data;
+
+  MyWidget({required this.data});
+
+  @override
+  _MyWidgetState createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<MyWidget> {
+  String _data = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _data = widget.data;
+  }
+
+  @override
+  void didUpdateWidget(covariant MyWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.data != oldWidget.data) {
+      setState(() {
+        _data = widget.data;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(_data);
+  }
+}
+```
+
+In this example, we define a `StatefulWidget` called `MyWidget` that takes a data parameter in its constructor. We use the `didUpdateWidget` method to update the widget's state (i.e., the `_data` variable) when the data parameter changes. When the widget is built, it displays the current value of `_data` using a `Text` widget.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q73. What is a `CustomPainter` in Flutter?
+
+In Flutter, a `CustomPainter` is a class that allows to create custom graphics and animations by painting on a Canvas. It is used in conjunction with a `CustomPaint` widget to create custom visuals that can be added to a widget tree.
+
+To use `CustomPainter`, we need to create a class that extends `CustomPainter` and implements the `paint` and `shouldRepaint` methods. The `paint` method is where we define what to draw on the canvas, while the `shouldRepaint` method is used to determine whether to repaint the canvas when the widget is updated.
+
+```dart
+// Custom Painter
+class RectanglePainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = Colors.blue
+      ..style = PaintingStyle.fill;
+    final rect = Rect.fromLTWH(0, 0, size.width, size.height);
+    canvas.drawRect(rect, paint);
+  }
+
+  @override
+  bool shouldRepaint(RectanglePainter oldDelegate) => false;
+}
+
+// How to use the CustomPainter using CustomPaint widget
+CustomPaint(
+  painter: RectanglePainter(),
+  size: Size(200, 200), // defines the sixe of the canvas
+),
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q74. What is the purpose of the `AnimatedBuilder` widget in Flutter?
+
+The `AnimatedBuilder` widget in Flutter is used to create complex animations by separating the animation logic from the widget tree. It provides a builder function that returns a widget tree, and an animation object that can be used to animate the properties of the widgets in the tree.
+
+Here's a simple code example that demonstrates how to use `AnimatedBuilder`:
+
+```dart
+class MyWidget extends StatefulWidget {...
+
+class _MyWidgetState extends State<MyWidget> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: const Duration(seconds: 1),
+      vsync: this,
+    );
+    _animation = Tween<double>(begin: 0, end: 1).animate(_controller);
+    _controller.repeat(reverse: true);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _animation,
+      builder: (context, child) {
+        return Opacity(
+          opacity: _animation.value,
+          child: Container( ... ),
+        );
+      },
+    );
+  }
+}
+```
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q75. What is the purpose of the `Navigator` class in Flutter?
+
+In Flutter, the `Navigator` class is used to manage a stack of pages or routes in an app. It provides methods to push and pop routes onto and off of the stack, allowing the user to navigate between different screens or views within the app.
+
+Here are some of the key features and use cases of the `Navigator` class in Flutter:
+
+1. The `Navigator` class provides methods to push and pop routes onto and off of the stack. When a route is pushed onto the stack, it becomes the topmost route and is displayed on the screen. When a route is popped off the stack, the previous route becomes the topmost route and is displayed on the screen.
+2. The `Navigator` class provides a way to pass data between routes using the push method's arguments parameter.
+3. The `Navigator` class allows to manage the navigation history by controlling which routes are pushed onto and popped off of the stack.
+4. The `Navigator` class provides options to customize the transition animation when navigating between routes, such as sliding, fading, or scaling the new route into view.
 
 <div align="right">
     <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
