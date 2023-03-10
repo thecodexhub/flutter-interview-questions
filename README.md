@@ -94,11 +94,11 @@
 | 73 |[What is a `CustomPainter` in Flutter?](#q73-what-is-a-custompainter-in-flutter)|
 | 74 |[What is the purpose of the `AnimatedBuilder` widget in Flutter?](#q74-what-is-the-purpose-of-the-animatedbuilder-widget-in-flutter)|
 | 75 |[What is the purpose of the `Navigator` class in Flutter?](#q75-what-is-the-purpose-of-the-navigator-class-in-flutter)|
-| 76 |What is the purpose of the `AnimatedSwitcher` widget in Flutter?|
-| 77 |What is the purpose of the `FittedBox` widget in Flutter?|
-| 78 |What is a State Management in Flutter?|
-| 79 |What is the difference between Cupertino and Material Design in Flutter?|
-| 80 |What is the purpose of the Material Design Icons package in Flutter?|
+| 76 |[What is the purpose of the `AnimatedSwitcher` widget in Flutter?](#q76-what-is-the-purpose-of-the-animatedswitcher-widget-in-flutter)|
+| 77 |[What is the purpose of the `FittedBox` widget in Flutter?](#q77-what-is-the-purpose-of-the-fittedbox-widget-in-flutter)|
+| 78 |[What is State Management in Flutter?](#q78-what-is-state-management-in-flutter)|
+| 79 |[What is the difference between Cupertino and Material Design in Flutter?](#q79-what-is-the-difference-between-cupertino-and-material-design-in-flutter)|
+| 80 |[What is the purpose of the Material Design Icons package in Flutter?](#q80-what-is-the-purpose-of-the-material-design-icons-package-in-flutter)|
 
 <br />
 <hr />
@@ -1717,6 +1717,111 @@ Here are some of the key features and use cases of the `Navigator` class in Flut
 2. The `Navigator` class provides a way to pass data between routes using the push method's arguments parameter.
 3. The `Navigator` class allows to manage the navigation history by controlling which routes are pushed onto and popped off of the stack.
 4. The `Navigator` class provides options to customize the transition animation when navigating between routes, such as sliding, fading, or scaling the new route into view.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q76. What is the purpose of the `AnimatedSwitcher` widget in Flutter?
+
+The `AnimatedSwitcher` widget in Flutter is used to create animated transitions between two or more widgets. The purpose of the `AnimatedSwitcher` widget is to provide an easy-to-use way to animate changes in the widget tree. When you use the `AnimatedSwitcher`, you can specify a new child widget to be displayed, and the `AnimatedSwitcher` will animate the transition between the old and new widgets using a customizable animation.
+
+The `AnimatedSwitcher` widget has several properties that can be used to customize the animation, including the duration of the animation, the type of animation, and whether or not to fade the widgets in and out.
+
+Some common use cases for the `AnimatedSwitcher` widget include:
+
+- Swapping out one widget for another in response to user input
+- Animating changes to a list of items, such as adding or removing items
+- Creating smooth transitions between screens or pages in a multi-page app
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q77. What is the purpose of the `FittedBox` widget in Flutter?
+
+The `FittedBox` widget in Flutter is used to automatically scale and position its child within its own bounds. The purpose of the `FittedBox` widget is to provide an easy-to-use way to adjust the size and position of a child widget to fit within its parent widget. When using the `FittedBox`, we can specify a child widget that is larger or smaller than its parent, and the `FittedBox` will automatically scale and position the child widget to fit within the parent widget's bounds.
+
+The `FittedBox` widget has several properties that can be used to customize the scaling behavior, including the fit property which determines how the child widget should be scaled, and the alignment property which determines where the child widget should be positioned within the parent widget.
+
+Some common use cases for the `FittedBox` widget include:
+
+- Scaling and centering an image within a container widget
+- Scaling and positioning text within a layout to fit within available space
+- Scaling and positioning UI elements to fit within different screen sizes.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q78. What is State Management in Flutter?
+
+State management in Flutter refers to the management of the state of widgets and their properties in a Flutter app. State management is an essential concept in Flutter because it allows developers to create dynamic and interactive user interfaces that respond to user input and changes in data.
+
+In Flutter, widgets can be either stateful or stateless. Stateless widgets are widgets that do not change over time, whereas stateful widgets are widgets that can change their properties and appearance over time.
+
+State management in Flutter involves managing the state of stateful widgets, which can be done using various techniques and design patterns, such as:
+
+- **StatefulWidget and State**: This is the most basic and straightforward way to manage the state of a widget in Flutter. In this approach, a widget is split into two classes: `StatefulWidget` and `State`. The `StatefulWidget` is responsible for creating the `State` object, and the `State` object is responsible for managing the state of the widget.
+
+- **InheritedWidget and InheritedModel**: These are two classes that allow the sharing of data between widgets in a Flutter app. `InheritedWidget` and `InheritedModel` can be used to manage the state of a widget by passing data down the widget tree.
+
+- **Provider**: This is a third-party library that simplifies state management in Flutter. `Provider` uses `InheritedWidget` under the hood and provides a simple and easy-to-use API for managing the state of a widget.
+
+- **BLoC (Business Logic Component) pattern**: This is a design pattern that separates the business logic and presentation layers of an app. BLoC can be used for state management by creating a stream of events that represent changes to the state of the widget.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q79. What is the difference between Cupertino and Material Design in Flutter?
+
+Cupertino and Material Design are two design languages used in Flutter for building iOS and Android apps, respectively. While both design languages follow different design principles and have unique features, they share some similarities as well.
+
+Here are some of the main differences between Cupertino and Material Design in Flutter:
+
+1. **Visual Design**: Cupertino design is characterized by its use of translucency, minimalism, and flat design, whereas Material Design uses bold typography, bright colors, and depth effects to create a layered look.
+
+2. **Navigation and Layout**: Cupertino design uses a bottom navigation bar for app navigation and has a more top-down layout approach, while Material Design uses a drawer for navigation and has a left-to-right layout approach.
+
+3. **Widgets**: Cupertino and Material Design have different sets of widgets that reflect their design language. For example, Cupertino widgets have a more minimalist look, with more whitespace and fewer borders, whereas Material Design widgets are more vibrant, with bright colors and more pronounced borders.
+
+4. **Iconography**: The icons used in Cupertino and Material Design are also different. Cupertino icons have a more minimalist design, with fewer details and a more stylized look, whereas Material Design icons are more detailed and three-dimensional.
+
+Despite these differences, both design languages share some commonalities in the way they implement responsive design and use animations to enhance the user experience. Flutter allows developers to easily switch between Cupertino and Material Design widgets and design principles, making it possible to create apps that have a consistent look and feel across both iOS and Android platforms.
+
+<div align="right">
+    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
+</div>
+
+## Q80. What is the purpose of the Material Design Icons package in Flutter?
+
+The Material Design Icons package in Flutter provides a set of icons that follow the Material Design guidelines for iconography. These icons are designed to be simple, easy to recognize, and scalable, making them ideal for use in mobile apps and web applications.
+
+The Material Design Icons package contains over 4,000 icons that cover a wide range of categories, including action icons, alert icons, communication icons, content icons, device icons, editor icons, file icons, hardware icons, image icons, maps icons, navigation icons, notification icons, places icons, social icons, toggle icons, and more.
+
+To use  Material Design Icons, first we need to add the package as a dependency to your Flutter project. Then, we can use any of the icons in the app by importing the `MaterialIcons` class and referencing the icon by name.
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My App'),
+      ),
+      body: Center(
+        child: Icon(MdiIcons.home),
+      ),
+    );
+  }
+}
+```
+
+Overall, the Material Design Icons package is a useful resource for Flutter developers, as it provides a large set of high-quality icons that can be used to enhance the user experience of their apps.
 
 <div align="right">
     <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
