@@ -107,9 +107,7 @@
 
 Flutter is an open-source UI software development kit created by Google. It is used to develop cross platform applications for Android, iOS, Linux, macOS, Windows, and the web from a single codebase. Flutter was released in May 2017. Developers consider it as the fastest and most expressive way to create native apps. Flutter will have a significant impact on the development of high-quality, feature-packed mobile applications in the near future due to its simplicity, high performance as a result of its development, and rich user interface.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q2. What is Dart and Why does Flutter use it?
 
@@ -118,9 +116,7 @@ Dart is a programming language designed for client development, such as for the 
 * Dart allows Flutter to avoid the need for a separate declarative layout language like JSX or XML, or separate visual interface builders, because Dart's declarative, programmatic layout is easy to read and visualize.
 * Dart uses the Just In Time compilation. This drastically reduces the time of development and responds faster.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q3. What is `pubspec.yaml` file and what does it do?
 
@@ -128,9 +124,7 @@ Every Flutter project includes a `pubspec.yaml` file, which is generated while c
 
 The pubspec file specifies dependencies that the project requires, such as particular packages (and their versions), fonts, or image files. It also specifies other requirements, such as dependencies on developer packages (like testing or mocking packages), or particular constraints on the version of the Flutter SDK.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q4. What is the difference between `main()` and `runApp()` functions in Flutter?
 
@@ -138,9 +132,7 @@ The `main()` function tells Dart where the program starts, and it must be in the
 
 The `runApp()` function should return widget that would be attached to the screen as a root of the widget tree that will be rendered.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q5. Differentiate between named parameters and positional parameters in Flutter.
 
@@ -153,9 +145,7 @@ doSomething(String name, [String greeting = 'Hello']); // Positional Optional Pa
 doSomething({String? name, String greeting = 'Hello'}); // Named Optional Parameter
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q6. What are widgets in Flutter?
 
@@ -163,9 +153,7 @@ Widgets are the central class hierarchy in the Flutter framework, that describes
 
 In Flutter, everything is a widget.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q7. What is `Hot Reload` and `Hot Restart` in Flutter?
 
@@ -173,9 +161,7 @@ Flutter's `Hot Reload` feature injects the updated source code files into the ru
 
 Whereas `Hot Restart` loads the updated source code files into the VM and restarts the Flutter app, losing all the previous app states.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q8. What do you mean by open-source software? Is Flutter open-source?
 
@@ -183,9 +169,7 @@ Open-source software is software with with source code that anyone can inspect, 
 
 Yes, Flutter is an open-source software development kit.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q9. Differentiate between `StatelessWidget` and `StatefulWidget` in Flutter.
 
@@ -193,9 +177,7 @@ Yes, Flutter is an open-source software development kit.
 
 `StatefulWidget`s are those that change their properties while running. They are dynamic, which means they can be rebuilt multiple times during their lifetime. It can alter its appearance in response to events caused by the user interactions or when data is received. **Checkbox**, **Radio**, **Slider**, **InkWell**, **Form**, and **TextField** are examples of stateful widgets.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q10. What is `BuildContext` in Flutter? And why is it needed?
 
@@ -203,9 +185,7 @@ Yes, Flutter is an open-source software development kit.
 
 There are many reasons why `BuildContext` is important. From locating widgets in the tree to interacting with **RenderObjects**, the context makes all of these interactions possible. It serves as the **bridge** between the widgets and rendering layer and is especially powerful for combining functionality or using information from one tree in another.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q11. What are packages and plugins in Flutter?
 
@@ -213,9 +193,7 @@ A package only contains Dart code. Some of the packages may use Flutter specific
 
 A plugin contains Dart combined with one or more platform-specific native (Java/Swift/JavaScript) code. The API of the plugin is written in Dart and the implementations are written in native languages. Flutter uses platform channels to communicate with native codes.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q12. Name some popular apps made with Flutter.
 
@@ -235,9 +213,7 @@ A plugin contains Dart combined with one or more platform-specific native (Java/
 
 _Source: [here](https://flutter.dev/showcase)_
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 # Q13. What are different build modes in Flutter?
 
@@ -249,9 +225,7 @@ The Flutter tooling supports three different build modes while compiling the app
 
 _To learn more, check [docs](https://docs.flutter.dev/testing/build-modes)._
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q14. What is the difference between `WidgetsApp` and `MaterialApp` in Flutter?
 
@@ -259,9 +233,7 @@ _To learn more, check [docs](https://docs.flutter.dev/testing/build-modes)._
 
 `MaterialApp` builds an application that uses the mterial design. It is built upon the `WidgetsApp` and contains some material-design specific functionality, such as **AnimatedTheme**. We certainly don't require `MaterialApp` every time when building a Flutter project. `CupertinoApp` gives iOS like look and feel, or we can even define our custom sets of widgets. 
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q15. Differentiate between final, const and static keyword.
 
@@ -273,9 +245,7 @@ Now the only difference between the final and const variable is that **final is 
 
 The `static` keyword is used for a class-level variable and method that is the same for every instance of a class, this means if a data member is static, it can be accessed without creating an object. The static keyword allows data members to persist Values between different instances of a class.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q16. What are `StatefulWidget` Lifecycle methods. Explain briefly.
 
@@ -297,9 +267,7 @@ The `static` keyword is used for a class-level variable and method that is the s
 
 - **dispose() method:** This method is called when the State is removed from the tree, permanently. After the dispose() method is called, the State object is considered unmounted. Subclasses should override this method to release any resources retained by this object.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q17. What are keys and why do we need them?
 
@@ -309,9 +277,7 @@ The most common usage of key is when we are dealing with collections of widgets 
 
 For an explanation with an example, check this [stackoverflow answer](https://stackoverflow.com/a/50081052).
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q18. What is the difference between `Expanded` and `Flexible` widget?
 
@@ -337,9 +303,7 @@ Column(children: [
   <img src="assets/expanded_vs_flexible.PNG" alt="Expanded vs Flexible" width="800px" />
 </p>
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q19. What is Fat Arrow Notation in Dart?
 
@@ -363,17 +327,13 @@ String findSquare(int n) {
 String findSquare(int n) => 'The square of $n is ${n * n}.';
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q20. What is the purpose of `SafeArea` widget in Flutter?
 
 The `SafeArea` widget insets its child by sufficient padding to avoid intrusions by the operating system. For example, this will indent the child by enough to avoid the status bar at the top of the screen. It will also indent the child by the amount necessary to avoid the Notch, or similar creative physical features of the display.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q21. What are `Slivers`?
 
@@ -383,9 +343,7 @@ Under the hood, slivers are used to implement all of the scrollable views you us
 
 Sliver lets you render child widgets lazily or render only the visible segment of the screen. Additionally, Sliver provides a better experience when you need to scroll a list of items and a grid of items all together as a single unit or create a collapsible header. It makes the overall scrolling effect of large lists effective and efficient.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q22. What is the extension method in Dart?
 
@@ -432,9 +390,7 @@ Text('Text widget with the default padding of 8.0').addPadding();
 Text('Text widget with padding of 16.0').addPadding(16.0);
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q23. Explain the `mounted` property. How is it important and when to use it?
 
@@ -444,9 +400,7 @@ After creating a State object and before calling initState, the framework **"mou
 
 It is an error to call setState unless mounted is true. This property is useful when a method on your state calls setState() but it isn't clear when or how often that method will be called. You can use `if (mounted) {...` to make sure the State exists before calling setState().
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q24. What is sound null safety?
 
@@ -454,9 +408,7 @@ It is an error to call setState unless mounted is true. This property is useful 
 
 **Null safety** is a guarantee within an object-oriented programming language that no object references will have null or void values.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q25. Differentiate between `mainAxisAlignment` and `crossAxisAlignment`.
 
@@ -480,9 +432,7 @@ For a `Column` widget:
 
 _Image source: [Flutter Docs](https://docs.flutter.dev/development/ui/layout#aligning-widgets)_
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q26. What are mixins? How to use them?
 
@@ -537,9 +487,7 @@ class Twitter extends SocialMedia with SocialMediaGreetings {
 }
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q27. What is the difference between `Container` and `SizedBox` widget?
 
@@ -549,9 +497,7 @@ On the other hand **Container** is a widget that any person can modify according
 
 When used for whitespace, there is a linter warning to prefer SizedBox instead of Container. Because a Container is a heavier widget than a SizedBox, and as bonus, SizedBox has a const constructor, so it won't even create a new instance during runtime.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q28. What do you mean by Null-aware operators?
 
@@ -592,9 +538,7 @@ Example of null-aware operators are:
   x ??= 5;  // As x is not null now, it's value is still 3
   ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q29. What is `AppLifecycleState`?
 
@@ -608,9 +552,7 @@ The `AppLifecycleState` defines the state that an application can be.
 
 - **resumed (AppLifecycleState.resumed):** This means the application is visible and responding to user input.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q30. What is the difference between `NetworkImage` and `Image.network` in flutter?
 
@@ -618,9 +560,7 @@ The `AppLifecycleState` defines the state that an application can be.
 
 `Image.network` creates a widget that displays an image on the screen. It is just a named constructor on the **Image** class. It sets the image property using the **NetworkImage** . This image property is then used to display the image.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q31. Explain async, await and Future.
 
@@ -642,9 +582,7 @@ void main() async {
 }
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q32. What is `resizeToAvoidBottomInset`? When should we use it?
 
@@ -652,9 +590,7 @@ The `resizeToAvoidBottomInset` is a property in the `Scaffold` widget. It is a b
 
 It should be used when the body of the `Scaffold` contains a form or text input fields, and it is desirable to avoid having the input fields covered by the on-screen keyboard when the user is entering text.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q33. What is `TextEditingController`?
 
@@ -662,9 +598,7 @@ The `TextEditingController` is a class in the Flutter framework that provides co
 
 It is typically used in conjunction with a `TextField` widget to create an editable text input field in a Flutter application. The `TextEditingController` is assigned to the `controller` property of the `TextField`, and it can be used to retrieve the entered text, set the initial text, or respond to changes in the text.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q34. What is `Animation` and `AnimationController`?
 
@@ -715,9 +649,7 @@ class _MyAnimationState extends State<MyAnimation>
 }
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q35. What is `InheritedWidget` in Flutter?
 
@@ -727,9 +659,7 @@ An `InheritedWidget` is a widget that, when it is inserted into the widget tree,
 
 `InheritedWidget` is often used to provide data to descendant widgets that is frequently required, such as the theme or the current locale. By wrapping your application in an `InheritedWidget`, you can make this data available to all of your widgets, and avoid having to pass it down through multiple levels of the widget tree.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q36. What is Flutter Tree Shaking?
 
@@ -739,9 +669,7 @@ Tree shaking in Flutter works by analyzing the dependencies of each widget and o
 
 In summary, Flutter Tree shaking is a feature that helps to optimize the size and performance of Flutter applications by only including the code that is actually used.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q37. What is an `AspectRatio` widget used for?
 
@@ -751,9 +679,7 @@ The aspect ratio is defined as the width of the widget divided by its height. Th
 
 For example, if you want to create a square widget, you can wrap the widget in an AspectRatio widget with an aspect ratio of 1.0, and the widget will always be square, regardless of the size of the parent container.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q38. What is `vsync`? Explain.
 
@@ -804,9 +730,7 @@ class _MyAnimationState extends State<MyAnimation>
 }
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q39. Differentiate between `Stream` and `Future` in Flutter.
 
@@ -818,9 +742,7 @@ class _MyAnimationState extends State<MyAnimation>
 
 In summary, the main difference between `Future` and `Stream` is that `Future` represents a single value that will be available in the future, while `Stream` represents a sequence of values that are emitted over time.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q40. What is `assert` used for in Dart and Flutter?
 
@@ -845,9 +767,7 @@ In this example, if `score` is less than 60, the `assert` statement will throw a
 
 In summary, `assert` is used in Dart and Flutter to validate conditions during development and help catch potential bugs before they make it to production.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q41. Can you explain the process of creating custom widgets in Flutter?
 
@@ -865,9 +785,7 @@ The process of creating custom widgets in Flutter involves the following steps:
 
 These are the basic steps involved in creating custom widgets in Flutter. The exact process may vary depending on the specific requirements of your widget, but this general process should provide a good starting point.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q42. What is Typedef in Dart?
 
@@ -889,9 +807,7 @@ void main() {
 
 In this example, the `IntCallback` typedef defines a function type that takes an int as a parameter and returns void. The `callBackMethod` function takes an `IntCallback` as a parameter and calls it. The main function uses a closure to define an implementation of `IntCallback` and passes it to the `callBackMethod` function.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q43. What is `FutureBuilder` in Flutter and how is it used to build dynamic UI?
 
@@ -936,9 +852,7 @@ Widget build(BuildContext context) {
 
 In this example, the `_fetchData` function returns a Future that retrieves data from a server. The `FutureBuilder` widget listens to the Future and uses the `builder` callback to build the UI based on its state. If the Future is running, the `CircularProgressIndicator` is displayed. If the Future completes with data, the data is displayed in a list. If the Future completes with an error, an error message is displayed.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q44. How do you handle exceptions in Flutter, and what strategies have you used?
 
@@ -985,9 +899,7 @@ try {
 }
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q45. What is isolate in Flutter?
 
@@ -1012,9 +924,7 @@ void main() {
 
 In this example, the `backgroundTask` function runs in the background isolate. The main function creates the isolate and passes a `SendPort` to the `backgroundTask` function, which can be used to communicate with the main isolate.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q46. What are DevTools in Flutter?
 
@@ -1028,9 +938,7 @@ Here are some of the features of DevTools:
 - **Logging view**: Displays log messages and errors generated by the app.
 - **Hot reload**: Lets us modify oour code and see the changes reflected in the app without having to restart it.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q47. How would you make HTTP requests in the Flutter framework?
 
@@ -1060,9 +968,7 @@ In this example, we use the `http.get` method to send a GET request to the speci
 
 The `http` package is a simple and powerful tool for making HTTP requests in Flutter, and it can be used for a variety of tasks, including retrieving data from APIs, submitting form data, and uploading files.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q48. What is Factory constructor?
 
@@ -1089,9 +995,7 @@ In this example, the factory constructor `Rectangle.square` takes a side paramet
 
 This helps to create a more flexible and reusable codebase, and it also makes it easier to maintain and test the code.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q49. Can you explain the process of testing a Flutter app?
 
@@ -1103,9 +1007,7 @@ When it comes to testing, we can use a combination of manual testing and automat
 
 In addition to writing tests, we can also use a number of tools and techniques to test Flutter apps, such as code coverage tools to measure the amount of code that is covered by tests, performance testing tools to measure the performance of the app under different conditions, and accessibility testing tools to ensure that the app is accessible to users with disabilities. Overall, testing is a crucial part of the development process in Flutter and helps to ensure that the app is of high quality and meets the requirements of the users.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q50. Explain singleton class in flutter.
 
@@ -1140,17 +1042,13 @@ singleton.doSomething();
 
 This will create a single instance of `MySingleton` and call the `doSomething` method on it. Since `MySingleton` is a singleton class, any subsequent calls to the `MySingleton()` constructor will simply return the existing instance of the class, rather than creating a new instance.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q51. What technology is Flutter built with?
 
 Flutter is an open-source mobile application development framework that is built with the Dart programming language. Dart is a modern, object-oriented language that is designed to be easy to learn and use, while providing a robust set of features that are optimized for building web and mobile applications. Flutter is built on top of Dart, and provides a set of pre-built widgets and tools that make it easy to build high-performance, cross-platform mobile applications with a native look and feel. Additionally, Flutter uses the Skia graphics engine to render high-quality graphics and animations on multiple platforms, including iOS, Android, and the web.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q52. What is the event loop?
 
@@ -1160,9 +1058,7 @@ The event loop works by maintaining a queue of events and callbacks that need to
 
 The event loop is a crucial part of the Flutter framework, as it allows developers to create responsive and interactive applications that can handle user input and respond to changes in real-time. By using the event loop effectively, developers can ensure that their applications remain fast and responsive, even when performing complex tasks or running on slower devices.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q53. What is the difference between Provider vs. InheritedWidget?
 
@@ -1174,9 +1070,7 @@ Provider is a third-party package that provides an easy and efficient way to man
 
 In summary, while both Provider and InheritedWidget can be used to share data between widgets, Provider offers a more declarative and scalable approach to managing state, while InheritedWidget is a built-in widget in Flutter that can be used for simple to moderately complex use cases.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q54. What is the purpose of the `initState()` method in a StatefulWidget?
 
@@ -1186,9 +1080,7 @@ In the `initState()` method, we can perform one-time initialization tasks, such 
 
 Overall, the `initState()` method provides a way to set up the initial state of the widget and perform any necessary initialization tasks.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q55. What is the purpose of the `dispose()` method in a StatefulWidget?
 
@@ -1200,9 +1092,7 @@ It is important to note that the `dispose()` method is not called during a hot r
 
 Overall, the `dispose()` method provides a way to clean up any resources that the widget may have used, ensuring that the application runs smoothly and efficiently.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q56. What is a GlobalKey in Flutter?
 
@@ -1212,9 +1102,7 @@ With a `GlobalKey`, we can access a widget's state, as well as invoke its method
 
 However, it is important to use `GlobalKey` sparingly and only when necessary, as overuse can lead to poor code maintainability and performance issues. When possible, it is generally recommended to use the `BuildContext` object and Flutter's reactive programming model to handle state and data management in the application.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q57. What is the difference between padding and margin in Flutter?
 
@@ -1226,9 +1114,7 @@ In Flutter, `padding` and `margin` are two properties used to adjust the spacing
 
 In summary, `padding` is used to adjust the space inside a widget while `margin` is used to adjust the space outside a widget. Both `padding` and `margin` are important properties for achieving the desired layout and spacing between widgets in a Flutter application.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q58. What is the purpose of the scaffold widget in Flutter?
 
@@ -1238,9 +1124,7 @@ The Scaffold widget serves as a container for different widgets, such as a `AppB
 
 Using a Scaffold widget can help to quickly build a basic structure for a Flutter application's user interface. The widgets it contains can be customized to achieve a wide range of designs and functionalities.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q59. What is the purpose of the Expanded widget in Flutter?
 
@@ -1250,9 +1134,7 @@ When an `Expanded` widget is used, the child widget of the Row, Column, or Flex 
 
 If there is more than one Expanded widget in the same Row, Column, or Flex, the available space is divided among the children based on their `flex` property, which determines the proportion of the remaining free space that each child should occupy.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q60. How do you handle user input in Flutter?
 
@@ -1267,9 +1149,7 @@ Here is a simple process for handling user input in Flutter:
 
 It's important to note that the specific process for handling user input will vary depending on the widget and the requirements of the app. 
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q61. What is the purpose of the `LayoutBuilder` widget in Flutter?
 
@@ -1295,9 +1175,7 @@ LayoutBuilder(
 
 In this example, the `Container` widget will take up 50% of the available width and height, based on the `BoxConstraints` provided by the `LayoutBuilder`. This allows the widget to adjust its size based on the available space, making it more responsive.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q62. What is the purpose of the `SingleChildScrollView` widget in Flutter?
 
@@ -1324,9 +1202,7 @@ SingleChildScrollView(
 
 In this example, the `SingleChildScrollView` wraps a `Column` widget containing several `ListTile` widgets. If the content of the `Column` is too large to fit on the screen, the user can scroll through it to see all of the items.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q63. What is the purpose of the `Stack` widget in Flutter?
 
@@ -1343,9 +1219,7 @@ Stack(
 ),
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q64. What is a `Theme` in Flutter?
 
@@ -1374,9 +1248,7 @@ MaterialApp(
 ),
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q65. What is the purpose of the `Visibility` widget in Flutter?
 
@@ -1400,9 +1272,7 @@ Visibility(
 ),
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q66. How do you navigate between screens in Flutter?
 
@@ -1423,9 +1293,7 @@ Here are the basic steps to navigate between screens in Flutter:
    Navigator.pop(context),
    ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q67. What is a modal bottom sheet in Flutter?
 
@@ -1444,9 +1312,7 @@ showModalBottomSheet(
 );
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q68. How do you use the `ValueNotifier` class in Flutter?
 
@@ -1475,9 +1341,7 @@ To update the value of a `ValueNotifier`, simply set its value property:
 _myValue.value = 'New Value';
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q69. How do you use the `Positioned` widget in Flutter?
 
@@ -1504,9 +1368,7 @@ Stack(
 
 In this example, we create a Stack widget with two child widgets that are positioned at opposite corners of the Stack. The first child widget is positioned 10 pixels from the left and top edges of the Stack, while the second child widget is positioned 10 pixels from the right and bottom edges of the Stack.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q70. How do you pass data between screens in Flutter?
 
@@ -1555,9 +1417,7 @@ In Flutter, we can pass data between screens using various methods. Some of the 
 
 3. **Using a state management library**: We can use a state management library like Provider, Riverpod, Bloc, or MobX to manage the state of the app and pass data between screens. This approach is especially useful when complex data needs to be shared between multiple screens.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q71. What is a `MediaQuery` in Flutter?
 
@@ -1571,9 +1431,7 @@ The `MediaQuery` widget is usually placed at the root of the widget tree, and it
 - **Text scaling factor**: `MediaQueryData.textScaleFactor` returns the user's preferred text scaling factor, which can be used to adjust the font size of text in the app.
 - **Platform**: `MediaQueryData.platformBrightness` returns the platform's preferred brightness mode (light or dark).
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q72. What is the purpose of the `didUpdateWidget` method in a StatefulWidget?
 
@@ -1621,9 +1479,7 @@ class _MyWidgetState extends State<MyWidget> {
 
 In this example, we define a `StatefulWidget` called `MyWidget` that takes a data parameter in its constructor. We use the `didUpdateWidget` method to update the widget's state (i.e., the `_data` variable) when the data parameter changes. When the widget is built, it displays the current value of `_data` using a `Text` widget.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q73. What is a `CustomPainter` in Flutter?
 
@@ -1654,9 +1510,7 @@ CustomPaint(
 ),
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q74. What is the purpose of the `AnimatedBuilder` widget in Flutter?
 
@@ -1703,9 +1557,7 @@ class _MyWidgetState extends State<MyWidget> with SingleTickerProviderStateMixin
 }
 ```
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q75. What is the purpose of the `Navigator` class in Flutter?
 
@@ -1718,9 +1570,7 @@ Here are some of the key features and use cases of the `Navigator` class in Flut
 3. The `Navigator` class allows to manage the navigation history by controlling which routes are pushed onto and popped off of the stack.
 4. The `Navigator` class provides options to customize the transition animation when navigating between routes, such as sliding, fading, or scaling the new route into view.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q76. What is the purpose of the `AnimatedSwitcher` widget in Flutter?
 
@@ -1734,9 +1584,7 @@ Some common use cases for the `AnimatedSwitcher` widget include:
 - Animating changes to a list of items, such as adding or removing items
 - Creating smooth transitions between screens or pages in a multi-page app
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q77. What is the purpose of the `FittedBox` widget in Flutter?
 
@@ -1750,9 +1598,7 @@ Some common use cases for the `FittedBox` widget include:
 - Scaling and positioning text within a layout to fit within available space
 - Scaling and positioning UI elements to fit within different screen sizes.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q78. What is State Management in Flutter?
 
@@ -1770,9 +1616,7 @@ State management in Flutter involves managing the state of stateful widgets, whi
 
 - **BLoC (Business Logic Component) pattern**: This is a design pattern that separates the business logic and presentation layers of an app. BLoC can be used for state management by creating a stream of events that represent changes to the state of the widget.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q79. What is the difference between Cupertino and Material Design in Flutter?
 
@@ -1790,9 +1634,7 @@ Here are some of the main differences between Cupertino and Material Design in F
 
 Despite these differences, both design languages share some commonalities in the way they implement responsive design and use animations to enhance the user experience. Flutter allows developers to easily switch between Cupertino and Material Design widgets and design principles, making it possible to create apps that have a consistent look and feel across both iOS and Android platforms.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
 
 ## Q80. What is the purpose of the Material Design Icons package in Flutter?
 
@@ -1823,6 +1665,4 @@ class MyApp extends StatelessWidget {
 
 Overall, the Material Design Icons package is a useful resource for Flutter developers, as it provides a large set of high-quality icons that can be used to enhance the user experience of their apps.
 
-<div align="right">
-    <b><a href="#flutter-interview-questions">⮬ back to top</a></b>
-</div>
+**[⬆ Back to Top](#flutter-interview-questions)**
